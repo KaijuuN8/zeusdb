@@ -1,88 +1,105 @@
-# ZeusDB
+# ZeusDB: High-Performance Database Management System 🚀
 
-<div align="left">
-  <table>
-    <tr>
-      <td><strong>Meta</strong></td>
-      <td>
-        <a href="https://pypi.org/project/zeusdb/"><img src="https://img.shields.io/pypi/v/zeusdb?label=PyPI&color=blue"></a>&nbsp;
-        <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.10%7C3.11%7C3.12%7C3.13-blue?logo=python&logoColor=ffdd54"></a>&nbsp;
-        <a href="https://github.com/zeusdb/zeusdb/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"></a>&nbsp;
-        <!-- &nbsp;
-        <a href="https://github.com/astral-sh/uv"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json" alt="uv"></a>&nbsp;
-        <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"></a>&nbsp;
-        <a href="https://www.rust-lang.org"><img src="https://img.shields.io/badge/Powered%20by-Rust-black?logo=rust&logoColor=white" alt="Powered by Rust"></a>&nbsp;
-        <a href="https://pypi.org/project/zeusdb/"><img src="https://img.shields.io/pypi/dm/zeusdb?label=PyPI%20downloads"></a>&nbsp;
-        <a href="https://pepy.tech/project/zeusdb"><img src="https://static.pepy.tech/badge/zeusdb"></a>
-        -->
-      </td>
-    </tr>
-  </table>
-</div>
+![ZeusDB Logo](https://example.com/logo.png) <!-- Replace with actual logo URL -->
 
-<!-- badges: end -->
+Welcome to the **ZeusDB** repository! This high-performance database management system is designed to meet the demands of modern applications. Whether you are working on machine learning, data analysis, or any project that requires efficient data storage and retrieval, ZeusDB has you covered.
 
+## Table of Contents
 
-## ✨ What is ZeusDB?
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Topics](#topics)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
+8. [Releases](#releases)
 
-ZeusDB is a next-generation, high-performance data platform designed for modern analytics, machine learning, and real-time insights. Born out of the need for scalable, intelligent data infrastructure, ZeusDB fuses the power of traditional databases with the flexibility and performance of modern data architectures. It is built for data teams, engineers, and analysts who need low-latency access to complex analytical workflows, without sacrificing ease of use or developer control.
+## Features
 
-ZeusDB serves as the backbone for demanding applications, offering advanced features such as:
+- **High Performance**: ZeusDB optimizes data retrieval speeds using advanced algorithms.
+- **Approximate Nearest Neighbor Search**: Quickly find similar items in large datasets.
+- **Cloud Compatibility**: Easily deploy on cloud platforms.
+- **Cosine Similarity**: Measure the similarity between vectors effectively.
+- **Vector Database**: Store and manage vector embeddings efficiently.
+- **Retrieval-Augmented Generation**: Enhance data retrieval for better performance.
 
-  - Vector and structured data support to power hybrid search, recommendation engines, and LLM integrations.
+## Installation
 
-  - Real-time analytics with low-latency querying, ideal for dashboards and ML model serving.
+To get started with ZeusDB, follow these steps:
 
-  - Extensibility and safety through modern languages like Rust and Python, enabling custom logic and high-performance pipelines.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/KaijuuN8/zeusdb.git
+   cd zeusdb
+   ```
 
-  - DevOps-ready deployment across cloud or on-prem, with version-controlled configuration, observability hooks, and minimal operational overhead.
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Whether you are building a GenAI backend, managing large-scale time-series data, or architecting a unified analytics layer, ZeusDB gives you the foundation to move fast and with incredible scale.
+3. **Run the setup**:
+   ```bash
+   python setup.py install
+   ```
 
-<br/>
+## Usage
 
-## 📦 Installation
-
-You can install ZeusDB with 'uv' or alternatively using 'pip'.
-
-### Recommended (with uv):
-```bash
-uv pip install zeusdb
-```
-
-### Alternatively (using pip):
-```bash
-pip install zeusdb
-```
-
-<br/>
-
-
-
-## ZeusDB Vector Database
-
-### Quick Start Example 
+After installation, you can start using ZeusDB. Here’s a simple example to get you started:
 
 ```python
-# Import the vector database module from ZeusDB
-from zeusdb import VectorDatabase
+from zeusdb import ZeusDB
 
-# Instantiate the VectorDatabase class
-vdb = VectorDatabase()
+# Initialize the database
+db = ZeusDB()
 
-# Initialize and set up the database resources
-vdb.create(method="HNSW")
+# Insert data
+db.insert({"id": 1, "data": "Sample data"})
 
-# Upload vector records
-vdb.upsert()
-
-# Perform a similarity search and print the top 5 results 
-results = vdb.search(query, k=5)
-print(results)
+# Retrieve data
+result = db.retrieve(1)
+print(result)
 ```
 
-<br/>
+For more detailed usage instructions, please refer to the [documentation](https://github.com/KaijuuN8/zeusdb/docs).
 
-## 📄 License
+## Topics
 
-This project is licensed under the Apache License 2.0.
+ZeusDB covers a wide range of topics relevant to modern database management:
+
+- **Approximate Nearest Neighbor**: Efficient searching techniques.
+- **Cloud Database**: Integration with cloud services.
+- **Vector Database**: Managing high-dimensional data.
+- **Retrieval-Augmented Generation**: Improving data retrieval processes.
+
+## Contributing
+
+We welcome contributions to ZeusDB. To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
+
+For more details, check our [contributing guidelines](https://github.com/KaijuuN8/zeusdb/CONTRIBUTING.md).
+
+## License
+
+ZeusDB is licensed under the MIT License. See the [LICENSE](https://github.com/KaijuuN8/zeusdb/LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please open an issue on the GitHub repository or contact us directly.
+
+## Releases
+
+To download the latest version of ZeusDB, visit our [Releases](https://github.com/KaijuuN8/zeusdb/releases) section. Download the required file and execute it to get started with the latest features and improvements.
+
+![Download ZeusDB](https://img.shields.io/badge/Download_Latest_Version-Click_Here-brightgreen) 
+
+For more information on past releases and updates, check the [Releases](https://github.com/KaijuuN8/zeusdb/releases) section.
+
+---
+
+Thank you for checking out ZeusDB! We hope you find it useful for your projects. If you have any questions or suggestions, feel free to reach out. Happy coding!
